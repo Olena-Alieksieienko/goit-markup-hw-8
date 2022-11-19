@@ -1,0 +1,60 @@
+.employees {
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  padding: 94px 0;
+
+  &-list {
+  display: flex;
+  gap: 30px;
+  }
+
+  &-item {
+    background-color: var(--secondary-accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &-title {
+    @include font (36px, 1.17, 700, 0.03em);
+    color: var(--title-text-color);
+    margin-bottom: 50px;
+  }
+
+  &-name {
+    @include font (16px, 1.19, 500, 0.03em);
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+  }
+
+  &-position {
+    @include font (16px, 1.19, 400, 0.03em);
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-bottom: 16px;
+  }
+
+  &-specialization {
+    padding: 30px 0;
+    font-size: 0;
+  }
+
+  &-soc-link {
+    background: var(--secondary-accent-color);
+  }
+}
+
+.employees-soc-icon {
+  fill: var(--fill-icon-color);
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  .employees-soc-link:hover &,
+  .employees-soc-link:focus & {
+  fill: var(--secondary-accent-color);
+  outline: 0;
+  }
+}
+
+

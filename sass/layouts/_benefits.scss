@@ -1,0 +1,36 @@
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+    &__list {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 4);
+    }
+
+    &__images {
+      width: 270px;
+      height: 120px;
+      @extend %align-list;
+      justify-content: center;
+      background-color: var(--secondary-bg-color);
+      margin-bottom: 30px;
+    }
+
+    &__name {
+      @include font (14px, 1.14, 700, 0.03em);
+      text-transform: uppercase;
+      color: var(--title-text-color);
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      @include font (14px, 1.71, 400, 0.03em);
+      color: var(--primary-text-color);
+    }
+}
+
+

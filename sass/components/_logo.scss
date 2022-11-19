@@ -1,0 +1,13 @@
+/* ---------- Лого ---------- */
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  @include font (26px, 1.19, 700, 0.03em);
+  color: var(--accent-color);
+}
+
+.logo__accent {
+  color: var(--header-logo-text-color); 
+}
+
+
