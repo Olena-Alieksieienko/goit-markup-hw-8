@@ -1,13 +1,15 @@
 .about {
+  display: none;
   text-align: center;
   padding-bottom: 94px;
 
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+
   &__title {
+  @include font (36px, 1.17, 700, 0.03em);
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
   }
 
@@ -30,11 +32,9 @@
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--secondary-accent-color);
-
-    display: flex;
+    @extend %align-list;
     justify-content: center;
-    align-items: center;
-
     background: rgba(47, 48, 58, 0.8);
   }
 }
+

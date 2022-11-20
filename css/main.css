@@ -46,7 +46,7 @@ img {
   width: 100%;
 }
 
-.clients__link, .benefits__images, .navigation, .header__container, .social-link, .check-text, .modal-close {
+.clients__link, .about__top-text, .benefits__images, .navigation, .header__container, .social-link, .check-text, .modal-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -640,15 +640,21 @@ html {
 }
 
 .about {
+  display: none;
   text-align: center;
   padding-bottom: 94px;
 }
+@media screen and (min-width: 1200px) {
+  .about {
+    display: block;
+  }
+}
 .about__title {
-  color: var(--title-text-color);
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  font-weight: 700;
   letter-spacing: 0.03em;
+  color: var(--title-text-color);
   margin-bottom: 50px;
 }
 .about__list {
@@ -670,15 +676,9 @@ html {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: rgba(47, 48, 58, 0.8);
 }
 
