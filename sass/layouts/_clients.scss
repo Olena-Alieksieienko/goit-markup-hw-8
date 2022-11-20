@@ -1,10 +1,17 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media  screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__title {
     @include font (28px, 1.18, 700, 0.03em);
     text-align: center;
     color: var(--title-text-color);
+    @media  screen and (min-width: 1200px) {
+    @include font (36px, 1.17, 700, 0.03em);
+  }
     }
   &__list {
     display: flex;
@@ -14,10 +21,19 @@
     margin-top: 30px;
 
     list-style-type: none;
+    @media  screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
     }
   &__item {
     display: flex;
     width: calc((100% - 30px) / 2);
+    @media  screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+  @media  screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+  }
   }
 }
 

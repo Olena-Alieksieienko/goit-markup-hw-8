@@ -716,6 +716,12 @@ html {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .clients__title {
   font-size: 28px;
   line-height: 1.18;
@@ -723,6 +729,14 @@ html {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
 }
 .clients__list {
   display: -webkit-box;
@@ -734,11 +748,26 @@ html {
   margin-top: 30px;
   list-style-type: none;
 }
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    margin-top: 50px;
+  }
+}
 .clients__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients__link {
