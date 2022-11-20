@@ -1,36 +1,55 @@
 .benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    &__list {
-      display: flex;
-      gap: 30px;
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
     }
 
-    &__item {
-      flex-basis: calc((100% - 30px) / 4);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__images {
+    padding: 25px 100px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    @extend %align-list;
+    justify-content: center;      
     }
 
-    &__images {
-      width: 270px;
-      height: 120px;
-      @extend %align-list;
-      justify-content: center;
-      background-color: var(--secondary-bg-color);
-      margin-bottom: 30px;
-    }
+  &__name {
+  margin-bottom: 10px;
+  text-align: center;
+  @include font (14px, 1.14, 700, 0.03em);
+  text-transform: uppercase;
+  color: var(--title-text-color);
 
-    &__name {
-      @include font (14px, 1.14, 700, 0.03em);
-      text-transform: uppercase;
-      color: var(--title-text-color);
-      margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+    text-align-last: left;
     }
+  }
 
-    &__description {
-      @include font (14px, 1.71, 400, 0.03em);
-      color: var(--primary-text-color);
-    }
+  &__description {
+  @include font (14px, 1.71, 400, 0.03em);
+  color: var(--primary-text-color);
+  }
 }
-
-
