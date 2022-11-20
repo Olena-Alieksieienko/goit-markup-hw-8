@@ -11,8 +11,8 @@
     color: var(--title-text-color);
     @media  screen and (min-width: 1200px) {
     @include font (36px, 1.17, 700, 0.03em);
-  }
     }
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -23,17 +23,17 @@
     list-style-type: none;
     @media  screen and (min-width: 1200px) {
     margin-top: 50px;
-  }
     }
+  }
   &__item {
     display: flex;
     width: calc((100% - 30px) / 2);
     @media  screen and (min-width: 768px) {
     width: calc((100% - 60px) / 3);
-  }
-  @media  screen and (min-width: 1200px) {
+    }
+    @media  screen and (min-width: 1200px) {
     width: calc((100% - 150px) / 6);
-  }
+    }
   }
 }
 
