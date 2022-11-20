@@ -685,27 +685,71 @@ html {
 .employees {
   background-color: var(--secondary-bg-color);
   text-align: center;
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .employees {
+    padding: 94px 0;
+  }
 }
 .employees-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .employees-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .employees-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+.employees-title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.17;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .employees-title {
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
 }
 .employees-item {
+  max-width: 450px;
   background-color: var(--secondary-accent-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.employees-title {
-  font-size: 36px;
-  line-height: 1.17;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  margin-bottom: 50px;
+@media screen and (min-width: 768px) {
+  .employees-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+.employees-specialization {
+  padding: 30px 0;
+  font-size: 0;
 }
 .employees-name {
   font-size: 16px;
@@ -724,10 +768,6 @@ html {
   text-align: center;
   color: var(--primary-text-color);
   margin-bottom: 16px;
-}
-.employees-specialization {
-  padding: 30px 0;
-  font-size: 0;
 }
 .employees-soc-link {
   background: var(--secondary-accent-color);
