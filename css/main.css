@@ -15,6 +15,7 @@
   --fill-icon-color: #afb1b8;
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-bg: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 p,
@@ -533,17 +534,37 @@ html {
   padding-left: 45px;
   padding-right: 45px;
   background-color: var(--hero-bg-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-img.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+  background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg-mob.jpg);
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg-tab-2x.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-2x.jpg);
   }
 }
 
@@ -581,6 +602,7 @@ html {
   .hero__button {
     max-width: 216px;
     width: 216px;
+    margin-top: 30px;
     padding: 10px 0;
   }
 }
@@ -909,18 +931,43 @@ html {
   background-color: var(--hero-bg-color);
   color: var(--secondary-accent-color);
   padding: 60px 0;
+  text-align: center;
 }
 .footer .logo__accent {
   color: var(--secondary-accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
+}
 
-.footer-position {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer-position {
+    padding: 0 76px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-position {
+    padding: 0 15px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .address-item {
