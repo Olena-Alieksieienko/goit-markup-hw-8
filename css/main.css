@@ -925,6 +925,7 @@ html {
 }
 
 .footer {
+  text-align: center;
   background-color: var(--hero-bg-color);
   color: var(--secondary-accent-color);
   padding: 60px 0;
@@ -937,9 +938,11 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .address-item {
@@ -950,7 +953,8 @@ html {
 }
 
 .footer-address {
-  margin-top: 20px;
+  padding-top: 28px;
+  padding-bottom: 60px;
 }
 
 .address-location {
@@ -992,11 +996,12 @@ html {
 }
 
 .footer-second-block {
-  margin-left: 95px;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .invitation-text {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
@@ -1016,15 +1021,15 @@ html {
 }
 
 .footer-third-block {
-  margin-left: auto;
+  text-align: center;
 }
 
 .footer-subscription-title {
-  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 .footer-subscription-form-mail {
@@ -1076,8 +1081,6 @@ html {
 
 .subscription-button {
   width: 200px;
-  margin-left: 12px;
-  padding: 10px 28px;
 }
 
 .subscription-button-send-icon {
