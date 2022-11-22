@@ -30,16 +30,16 @@
       }
   }
     @media screen and (min-width: 1200px) {
-      max-width: 1600px;
-      padding-top: 200px;
-      padding-bottom: 200px;
+      // max-width: 1600px;
+      // padding-top: 200px;
+      // padding-bottom: 200px;
       background-image: var(--gradient-bg),
       url(../images/hero-bg/hero-bg.jpg);
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
         background-image: var(--gradient-bg),
-        url(../images/hero-bg/hero-2x.jpg);
+        url(../images/hero-bg/hero-bg-2x.jpg);
       }
   }
 }

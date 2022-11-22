@@ -556,15 +556,12 @@ html {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--gradient-bg), url(../images/hero-bg/hero-2x.jpg);
+    background-image: var(--gradient-bg), url(../images/hero-bg/hero-bg-2x.jpg);
   }
 }
 
