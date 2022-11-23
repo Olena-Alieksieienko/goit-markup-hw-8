@@ -458,26 +458,24 @@
     <footer class="footer__section">
       <div class="address__part container">
         <div class="footer__block">
-          <a href="./index.html" class="footer__link"><span class="logo--accent">Web</span>Studio</a>
+          <a href="./index.html"
+          class="footer__link"><span 
+          class="footer__logo">Web</span>Studio</a>
         <address class="address">
-              <a
-                class="address__link--location"
-                href="https://goo.gl/maps/35YgeVR9TJthD9GP8"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >м. Київ, пр-т Лесі Українки, 26</a
-              >
-
+              <a class="address__link--location" 
+              href="https://goo.gl/maps/35YgeVR9TJthD9GP8" target="_blank" rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
           <ul class="address__list list">
             <li class="address__item">
               <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
+
             <li class="address__item">
               <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
-        </div>      
+        </div>  
+
         <div class="footer">
         <p class="footer__text">приєднуйтесь</p>
         <ul class="footer-social__list list">
@@ -486,11 +484,12 @@
                       class="footer-social__link"
                       href="#"
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      ><svg class=" footer-social__icon" width="20" height="20">
-                        <use href="./images/icons.svg#instagram"></use></svg
-                    ></a>
+                      rel="noopener noreferrer nofollow">
+                      <svg class=" footer-social__icon" width="20" height="20">
+                        <use href="./images/icons.svg#instagram">
+                        </use></svg></a>
                   </li>
+
                   <li class="footer-social__item">
                     <a
                       class="footer-social__link"
@@ -501,6 +500,7 @@
                         <use href="./images/icons.svg#twitter"></use></svg
                     ></a>
                   </li>
+
                   <li class="footer-social__item">
                     <a
                       class="footer-social__link"
@@ -511,6 +511,7 @@
                         <use href="./images/icons.svg#facebook"></use></svg
                     ></a>
                   </li>
+
                   <li class="footer-social__item">
                     <a
                       class="footer-social__link"
@@ -523,26 +524,21 @@
                   </li>
         </ul>
         </div>
-        <div class="footer-subscription">
-                <p class="footer__text">Підпишіться на розсилку</p>
-                <form  name="footer-form" class="footer-form" action="#" autocomplete="off">
-                  <label>
-                        <input 
-                        type="email" 
-                        name="mail"  
-                        placeholder="E-mail"
-                        class="subscription-form-mail"/>
-                  </label>
-                        <button class="main-button subscription-button" type="submit">
-                            Підписатися<svg class="subscription-button-send-icon" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-btn-send"></use></svg>
-                          </button>
-                </form>
-        </div>
-      </div> 
-    </footer>
 
-
+      <form action="" class="footer-form">
+        <p class="footer__text">Підпишіться на розсилку</p>
+        <label class="footer-form__field">
+          <input type="text" placeholder="E-mail" class="footer-form__input"/>
+          <a href="" class="footer-form__link" aria-label="іконка">
+            Підписатися
+            <svg class="footer-form__icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-btn-send"></use>
+            </svg>
+          </a>
+        </label>
+      </form>
+    </div>
+  </footer>
     <!----------  МОДАЛЬНЕ ВІКНО  ------------>
 
     <!-- <div class="backdrop is-hidden" data-modal>
