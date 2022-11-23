@@ -37,7 +37,7 @@
 .address__link {
   display: block;
   font-family: $main-font;
-  @include font (14px, 1.14, 700, 0.03em);
+  @include font (14px, 1.14, 400, 0.03em); 
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition-property: color;
@@ -53,7 +53,7 @@
   display: block;
   text-decoration: none;
   font-family: $main-font;
-  @include font (14px, 1.14, 700, 0.03em);
+  @include font (14px, 1.14, 400, 0.03em);
   color: var(--secondary-accent-color);
   margin-top: 20px;
   transition-property: color;
