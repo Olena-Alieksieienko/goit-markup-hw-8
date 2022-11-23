@@ -81,6 +81,15 @@
   font-family: $main-font;
   @include font (14px, 1.17, 700, 0.03em);
   margin-bottom: 20px;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+    margin-top: 0;
+  }
 }
 
 .footer-social__list {
@@ -135,19 +144,7 @@
   }
 }
 
-.footer-subscription {
-  margin-left: auto;
-  @media screen and (min-width: 768px) {
-    margin-right: auto;
-    margin-top: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-right: 0;
-    margin-top: 0;
-  }
-}
-
-.footer-subscription-form-mail {
+.subscription-form-mail {
   min-width: 358px;
   padding: 15px;
   padding-left: 16px;

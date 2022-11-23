@@ -1060,6 +1060,19 @@ html {
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer__text {
+    margin-right: auto;
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__text {
+    margin-right: 0;
+    margin-top: 0;
+  }
 }
 
 .footer-social__list {
@@ -1125,23 +1138,7 @@ html {
   }
 }
 
-.footer-subscription {
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .footer-subscription {
-    margin-right: auto;
-    margin-top: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-subscription {
-    margin-right: 0;
-    margin-top: 0;
-  }
-}
-
-.footer-subscription-form-mail {
+.subscription-form-mail {
   min-width: 358px;
   padding: 15px;
   padding-left: 16px;
@@ -1158,31 +1155,31 @@ html {
   -webkit-transition-timing-function: var(--transition-timing-function);
           transition-timing-function: var(--transition-timing-function);
 }
-.footer-subscription-form-mail:focus {
+.subscription-form-mail:focus {
   outline: none;
   border: 1px solid var(--accent-color);
 }
-.footer-subscription-form-mail::-webkit-input-placeholder {
+.subscription-form-mail::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
-.footer-subscription-form-mail::-moz-placeholder {
+.subscription-form-mail::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
-.footer-subscription-form-mail:-ms-input-placeholder {
+.subscription-form-mail:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
-.footer-subscription-form-mail::-ms-input-placeholder {
+.subscription-form-mail::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
-.footer-subscription-form-mail::placeholder {
+.subscription-form-mail::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
