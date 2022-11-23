@@ -1,13 +1,26 @@
 /* ---------- Лого ---------- */
-
 .logo {
-  font-family: 'Raleway', sans-serif;
+  display: block;
+  color: #212121;
+  font-family: $secondary-font;
+  @include font (24px, 1.17, 700, 0.03em);
+  text-decoration: none;
+
+  @media (min-width: 1200px) {
   @include font (26px, 1.19, 700, 0.03em);
+  }
+
+  &--accent {
   color: var(--accent-color);
+  }
+
+  .header__container & {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    @media (min-width: 768px) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }   
 }
-
-.logo__accent {
-  color: var(--header-logo-text-color); 
-}
-
-
