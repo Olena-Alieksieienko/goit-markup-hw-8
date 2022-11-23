@@ -455,7 +455,7 @@
     <!-- </main> -->
 
     <!---------- ФУТЕР ---------->
-    <footer class="footer¬__section">
+    <footer class="footer__section">
       <div class="address__part container">
         <div class="footer__block">
           <a href="./index.html" class="footer__link"><span class="logo--accent">Web</span>Studio</a>
@@ -468,7 +468,7 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
 
-          <ul class="address__list">
+          <ul class="address__list list">
             <li class="address__item">
               <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
@@ -480,7 +480,7 @@
         </div>      
         <div class="footer">
         <p class="footer__text">приєднуйтесь</p>
-        <ul class="footer-social__list">
+        <ul class="footer-social__list list">
                   <li class="footer-social__item">
                     <a
                       class="footer-social__link"
@@ -523,23 +523,24 @@
                   </li>
         </ul>
         </div>
-        <form action="" class="footer-form">
+        <div class="footer-subscription">
                 <p class="footer__text">Підпишіться на розсилку</p>
-                  <label class="footer-form__field">
+                <form  name="footer-form" class="footer-form" action="#" autocomplete="off">
+                  <label>
                         <input 
                         type="email" 
                         name="mail"  
                         placeholder="E-mail"
-                        class="footer-form__input"/>
-                        <a href="" class="footer-form__link" aria-label="іконка">Підписатися 
-                          <svg class="footer-form__icon" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-btn-send"></use>
-            </svg>
-          </a>
-        </label>
-      </form>
-    </div>
-  </footer>
+                        class="subscription-form-mail"/>
+                  </label>
+                        <button class="main-button subscription-button" type="submit">
+                            Підписатися<svg class="subscription-button-send-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-btn-send"></use></svg>
+                          </button>
+                </form>
+        </div>
+      </div> 
+    </footer>
 
 
     <!----------  МОДАЛЬНЕ ВІКНО  ------------>
