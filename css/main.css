@@ -1227,30 +1227,35 @@ html {
 .footer-form__input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel-color);
 }
 .footer-form__input::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel-color);
 }
 .footer-form__input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel-color);
 }
 .footer-form__input::-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel-color);
 }
 .footer-form__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
+  font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--footer-mail-tel-color);
 }
