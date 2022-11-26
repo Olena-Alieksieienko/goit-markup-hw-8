@@ -172,7 +172,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--secondary-accent-color);
 }
 .menu.is-open .navigation {
   display: block;
