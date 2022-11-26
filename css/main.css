@@ -47,7 +47,7 @@ img {
   width: 100%;
 }
 
-.clients__link, .about__top-text, .benefits__images, .navigation, .header__container, .check-text, .modal-close {
+.clients__link, .about__top-text, .benefits__images, .check-text, .modal-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,24 +99,283 @@ html {
   margin: -1px;
 }
 
+.header {
+  background-color: var(--secondary-accent-color);
+  border-bottom: 1px solid var(--border-header-color);
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1200px) {
+  .header__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.menu {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 90px;
+    width: 100vw;
+  }
+}
+.menu .navigation {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu .navigation {
+    display: block;
+  }
+}
+.menu .contacts {
+  display: none;
+}
+.menu.is-open {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 48px 40px;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+}
+.menu.is-open .navigation {
+  display: block;
+}
+.menu.is-open .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-bottom: 64px;
+}
+.menu.is-open .contacts__item:last-child {
+  margin-bottom: 30px;
+}
+.menu.is-open .contacts__item:last-child .contacts__link {
+  color: #2196f3;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+.menu.is-open .contacts__item:not(:last-child) .contacts__link {
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+.menu .menu-social {
+  display: none;
+}
+.menu.is-open .menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu.is-open .menu-social__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu .menu-social__link {
+  color: #2196f3;
+  font-size: 18px;
+  line-height: 1.22;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .menu__contacts .contacts {
+    margin: 19px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .menu__contacts .contacts {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.site-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .site-navigation__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.site-navigation__link {
+  font-family: inherit;
+  color: #212121;
+  text-decoration: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+}
+@media (min-width: 768px) {
+  .site-navigation__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+.site-navigation__link__link--current, .site-navigation__link:hover, .site-navigation__link:focus {
+  color: #2196f3;
+}
+
+@media (max-width: 768px) {
+  .site-navigation__link--current {
+    color: #2196f3;
+  }
+  .site-navigation__link--current:hover, .site-navigation__link--current:focus {
+    color: #2196f3;
+  }
+}
+@media (min-width: 768px) {
+  .site-navigation__link--current {
+    color: #2196f3;
+    position: relative;
+  }
+  .site-navigation__link--current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.menu__button {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
+.menu__button__link--current, .menu__button:hover, .menu__button:focus {
+  fill: #2196f3;
+}
+
+.menu__icon {
+  width: 24px;
+  height: 16px;
+}
+
+.menu__button.is-open {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 15px;
+}
+
+.menu__button .icon-close-cross {
+  display: none;
+}
+
+.menu__button.is-open .icon-close-cross {
+  display: block;
+  fill: currentColor;
+  width: 11px;
+  height: 11px;
+}
+
+.menu__button .icon-close-cross {
+  display: none;
+}
+
+.menu__button.is-open .icon-burger {
+  display: none;
+}
+
+.icon-close-cross:hover, .icon-close-cross:focus {
+  color: #2196f3;
+}
+
 .container {
-  margin: 0 auto;
+  max-width: 450px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1170px;
   }
 }
 
@@ -454,100 +713,6 @@ html {
 }
 .social__item:last-child {
   margin-right: 0px;
-}
-
-/* ------------ Хедер ------------  */
-.header {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border-header-color);
-}
-
-/* ---------- Навігація --------- */
-.menu {
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
-}
-
-.header__menu {
-  margin-left: 93px;
-}
-
-.menu__link {
-  display: block;
-  position: relative;
-}
-.menu__link.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -33px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-}
-.menu .menu__link {
-  color: var(--title-text-color);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: var(--transition-duration);
-          transition-duration: var(--transition-duration);
-  -webkit-transition-timing-function: var(--transition-timing-function);
-          transition-timing-function: var(--transition-timing-function);
-}
-.menu .menu__link:hover, .menu .menu__link:focus {
-  color: var(--accent-color);
-  outline: 0;
-}
-.menu .menu__link.current {
-  color: var(--accent-color);
-}
-
-/* ---------- Mail Tel -----------*/
-.contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
-}
-
-.header__contacts {
-  margin-left: auto;
-}
-
-.contacts__mail,
-.contacts__tel {
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  vertical-align: middle;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: var(--transition-duration);
-          transition-duration: var(--transition-duration);
-  -webkit-transition-timing-function: var(--transition-timing-function);
-          transition-timing-function: var(--transition-timing-function);
-}
-.contacts__mail:hover, .contacts__mail:focus,
-.contacts__tel:hover,
-.contacts__tel:focus {
-  color: var(--accent-color);
-  outline: 0;
-}
-
-.contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
-  vertical-align: middle;
 }
 
 .hero {

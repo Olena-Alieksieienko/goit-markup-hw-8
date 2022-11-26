@@ -1,88 +1,18 @@
-/* ------------ Хедер ------------  */
-
 .header {
-  padding: 24px 0;
+  background-color: var(--secondary-accent-color);
   border-bottom: 1px solid var(--border-header-color);
+
+  @media (min-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+  }
 }
 
 .header__container {
-  @extend %align-list;
-}
-
-.navigation {
-  @extend %align-list;
-}
-
-/* ---------- Навігація --------- */
-
-.menu {
-  @include font (14px, 1.14, 500, 0.02em);
   display: flex;
-  gap: 50px;
-}
+  align-items: center;
 
-.header__menu {
-  margin-left: 93px;
-}
-
-.menu__link {
-  display: block;
-  position: relative;
-  &.current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -33px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+    @media (max-width: 1200px) {
+    justify-content: space-between;
   }
-  .menu & {
-    color: var(--title-text-color);
-    transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-  }
-  .menu &:hover,
-  .menu &:focus {
-    color: var(--accent-color);
-    outline: 0;
-  }
-
-  .menu &.current {
-    color: var(--accent-color);
-  }
-}
-
-/* ---------- Mail Tel -----------*/
-.contacts {
-  display: flex;
-  gap: 50px;
-}
-.header__contacts {
-  margin-left: auto;
-}
-
-.contacts__mail,
-.contacts__tel {
-  @include font (14px, 1.14, 500, 0.02em);
-  color: var(--primary-text-color);
-  vertical-align: middle;
-
-  transition-property: color;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    outline: 0;
-  }
-}
-
-.contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
-  vertical-align: middle;
 }

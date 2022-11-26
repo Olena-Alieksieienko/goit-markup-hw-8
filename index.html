@@ -24,43 +24,72 @@
 
   <body class="site-body">
     <!---------- ШАПКА САЙТУ ---------->
-    <!-- <header class="header">
-      <div class="container header__container"> -->
-    <!---------- НАВІГАЦІЯ САЙТУ ---------->
-        <!-- <nav class="navigation">
-          <a href="./index.html" class="logo link">Web<span class="logo__accent">Studio</span></a>
+    <header class="header">
 
-          <ul class="menu header__menu list">
-            <li class="menu__item">
-              <a class="menu__link link current" href="./index.html">Студія</a>
+      <div class="container header__container">
+    <!---------- НАВІГАЦІЯ САЙТУ ---------->
+          <a href="./index.html" class="logo link">Web<span class="logo--accent">Studio</span></a>
+
+        
+
+  <div class="menu js-menu-container">      
+<nav class="navigation">
+  <ul class="site-navigation list">
+            <li class="site-navigation__item">
+              <a class="site-navigation__link link current" href="./index.html">Студія</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
+
+            <li class="site-navigation__item">
+              <a class="site-navigation__link link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="menu__item"><a class="menu__link link" href="#">Контакти</a></li>
+            <li class="site-navigation __item"><a class="site-navigation__link link" href="#">Контакти</a>
+</li>
           </ul>
-        </nav> -->
+        </nav>
 
     <!---------- КОНТАКТНІ ДАНІ ---------->
-        <!-- <ul class="contacts header__contacts list">
-          <li class="contacts__item">
-            <a class="contacts__mail link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#mail"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__tel link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+  <div class="menu-contacts">
+    <ul class="contacts list">
+      <li class="contacts__item">
+        <a class="contacts__link link" aria-label="іконка" href="mailto:info@devstudio.com">
+          <svg class="contacts__mail contacts__icon" width="16" height="12">
+            <use href="./images/icons.svg#mail"></use></svg>info@devstudio.com</a>
+      </li>
+
+      <li class="contacts__item">
+        <a class="contacts__link link" aria-label="іконка" href="tel:+380961111111">
+          <svg class="contacts__tel contacts__icon" width="10" height="16">
+            <use href="./images/icons.svg#smartphone"></use></svg>+38 096 111 11 11</a>
+      </li>
+    </ul>
+
+    <!---------- Меню соціальне ---------->
+          <ul class="menu-social">
+            <li class="menu-social__item">
+              <a class="menu-social__link" href="./">Instagram</a>
+            </li>
+            <li class="menu-social__item">
+              <a class="menu-social__link" href="./">Twitter</a>
+            </li>
+            <li class="menu-social__item">
+              <a class="menu-social__link" href="./">Facebook</a>
+            </li>
+            <li class="menu-social__item">
+              <a class="menu-social__link" href="./">Linkedin</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
-    <main> -->
+
+      <button class="menu__button js-open-menu" data-menu-button type="button" aria-expanded="false">
+        <svg class="menu__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <use class="icon-close-cross" href="./images/icons/sprites.svg#icon-close-cross"></use>
+          <use class="icon-burger" href="./images/icons/sprites.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+    <main>
     <!---------- ГЕРОЙ ---------->
       <section class="hero">
         <div class="container">
@@ -630,7 +659,9 @@
     </div> -->
 
     <!---------- СКРИПТИ ---------->
-    
-    <script src="./js/modal.js"></script>
+  <script src="./js/modal.js"></script>
+  <script defer src="./js/menu.js"></script>
+  <script src="./js/form.js"></script>
+
   </body>
 </html>
